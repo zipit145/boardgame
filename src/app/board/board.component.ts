@@ -8,7 +8,7 @@ import { Character } from '../character';
 @Component({
   selector: 'app-board',
   templateUrl: './board.component.html',
-  styleUrls: ['./board.component.sass']
+  styleUrls: ['./board.component.css']
 })
 export class BoardComponent implements OnInit {
   board: Board[];

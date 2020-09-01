@@ -1,16 +1,19 @@
-<div class="mainBoardContainer">
 
-    <div *ngFor="let square of board">
-        {{square.id}}
+<div class="mainContainer">
+    <div class="mainBoardContainer">
+
+        <div *ngFor="let square of board" class="boardSquare">
+            {{square.id}}
+        </div>
+    
+    
     </div>
-    <div *ngFor="let character of characters">
-        {{character.name}}
-    </div>
-
-</div>
-
-<div class="CharacterDashboard">
-
-
-
+    
+    <div class="CharacterDashboard">
+    
+        <div *ngFor="let character of characters">
+            {{character.name}}
+        </div>
+    
+    </div>    
 </div>
