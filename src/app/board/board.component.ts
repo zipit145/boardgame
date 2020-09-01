@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { BoardService } from '../board.service';
-import { CharacterService } from '../character.service';
 import { Board } from '../board';
-import { Character } from '../character';
 
 
 @Component({
@@ -12,20 +10,15 @@ import { Character } from '../character';
 })
 export class BoardComponent implements OnInit {
   board: Board[];
-  characters: Character[];
 
-  constructor(private boardService: BoardService, private characterService: CharacterService) {
+  constructor(private boardService: BoardService) {
 
   }
 
   ngOnInit(): void {
     this.getBoard();
-    this.getCharacters();
   }
-  getCharacters(): void {
-    this.characterService.getCharacters()
-    .subscribe(characters => this.characters = characters)
-  }
+
   getBoard(): void{
     this.boardService.getBoard()
       .subscribe(board => this.board = board)
