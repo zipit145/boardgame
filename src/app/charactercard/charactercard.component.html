@@ -1,7 +1,17 @@
-<div *ngIf="character">
-
-    <h2>{{character.name | uppercase}} Details</h2>
-    <div><span>id: </span>{{character.id}}</div>
-    <div>{{character.name}}</div>
+<mat-card *ngIf="character" class="characterCardContainer">
+    <mat-card-header>
+    <div mat-card-avatar class="example-header-image"></div>
+    <mat-card-title>{{character.name | uppercase}} Details</mat-card-title>
+    <mat-card-subtitle></mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+        <div><span>id: </span>{{character.id}}</div>
+    </mat-card-content>
+    <mat-card-actions>
+    <button mat-button>LIKE</button>
+    <button mat-button>SHARE</button>
+    </mat-card-actions>
+</mat-card>
   
-</div>
+
+

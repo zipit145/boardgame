@@ -4,7 +4,7 @@ import { Character } from '../character';
 @Component({
   selector: 'app-charactercard',
   templateUrl: './charactercard.component.html',
-  styleUrls: ['./charactercard.component.sass']
+  styleUrls: ['./charactercard.component.css']
 })
 export class CharactercardComponent implements OnInit {
   @Input() character: Character;
