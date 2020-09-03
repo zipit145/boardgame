@@ -1,13 +1,38 @@
+button{
+    width: 120px;
+    margin-left: 50px;
+}
 .characterCardContainer{
     margin: 5px;
-    padding: 5px;
-    width: 200px;
+    padding: 20px;
+    width: 250px;
 }
 
-img{
+.knightCharacter{
     object-fit: none;
-    object-position: -80px -143px;
+    object-position: -240px -235px;
     width: 16px;
-    height: 16px;
+    height: 22px;
+    zoom: 2;
+}
+.rangerCharacter{
+    object-fit: none;
+    object-position: -112px -223px;
+    width: 16px;
+    height: 17px;
+    zoom: 2;
+}
+.priestCharacter{
+    object-fit: none;
+    object-position: -96px -223px;
+    width: 16px;
+    height: 17px;
+    zoom: 2;
+}
+.mageCharacter{
+    object-fit: none;
+    object-position: -143px -223px;
+    width: 17px;
+    height: 18px;
     zoom: 2;
 }
