@@ -13,6 +13,28 @@
     align-content: flex-start;
 }
 
+.boardbrick{
+    object-fit: none;
+    object-position: -1px -16px;
+    width: 15px;
+    height: 15px;
+    zoom: 6.6;
+}
+.boardstairs{
+    object-fit: none;
+    object-position: -80px -18px;
+    width: 19px;
+    height: 19px;
+    zoom: 5.2;
+}
+.boardfloor{
+    object-fit: none;
+    object-position: -83px -2px;
+    width: 14px;
+    height: 14px;
+    zoom: 7;
+}
+
 .boardSquare {
     border: 1px solid black;
     height: 98px;
