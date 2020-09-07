@@ -10,6 +10,7 @@ import { ControlsComponent } from './controls/controls.component';
 
 import { AngularMaterialModule } from './angular-material.module';
 import { CharactercardComponent } from './charactercard/charactercard.component';
+import { DraftDashboardComponent } from './draft-dashboard/draft-dashboard.component';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { CharactercardComponent } from './charactercard/charactercard.component'
     BoardComponent,
     CharacterDashboardComponent,
     ControlsComponent,
-    CharactercardComponent
+    CharactercardComponent,
+    DraftDashboardComponent
   ],
   imports: [
     BrowserModule,
