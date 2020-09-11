@@ -10,6 +10,7 @@ import { DraftService } from '../draft.service';
 })
 export class CharactercardComponent implements OnInit {
   @Input() character: Character;
+  @Input() phase: string;
 
   constructor(private draftService: DraftService) { }
 

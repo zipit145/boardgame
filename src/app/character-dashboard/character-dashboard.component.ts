@@ -9,11 +9,13 @@ import { Character } from '../character';
 })
 export class CharacterDashboardComponent implements OnInit {
   characters: Character[];
+  phase: string;
 
   constructor( private characterService: CharacterService) { }
 
   ngOnInit(): void {
     this.getCharacters();
+    this.phase = "Draft";
   }
 
   getCharacters(): void {

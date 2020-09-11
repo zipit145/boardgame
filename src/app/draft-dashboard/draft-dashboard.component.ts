@@ -9,9 +9,11 @@ import { DraftService } from '../draft.service';
 })
 export class DraftDashboardComponent implements OnInit {
   draft: Character[];
+  phase: string;
 
   constructor(private draftService: DraftService) {
     this.draft = this.draftService.draft
+    this.phase = "Deploy"
    }
 
   ngOnInit(): void {

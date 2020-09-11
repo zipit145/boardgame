@@ -6,7 +6,7 @@
     <!-- <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu"> -->
     <mat-card-content>
         <div *ngFor="let character of characters">
-            <app-charactercard [character]="character"></app-charactercard>
+            <app-charactercard [character]="character" [phase]="phase"></app-charactercard>
         </div>
     </mat-card-content>
 </mat-card>

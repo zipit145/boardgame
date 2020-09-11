@@ -7,11 +7,11 @@
     <mat-card-content>
         <!-- <div class="spriteImage"></div> -->
         <div><span>Character Appearance: </span><img [className]="character.name + 'Character'" src="../../assets/0x72_16x16DungeonTileset.v4.png"></div>
-        <div><span>Character Description: </span>{{character.description}}</div>
+        <div><span>Character Description: </span>{{character.description}}</div> {{phase}}
     </mat-card-content>
     <mat-card-actions>
-        <button *ngIf="character.drafted" mat-raised-button color="warn" (click)="deployCharacter(character)">Deploy this unit</button>
-        <button *ngIf="!character.drafted" mat-raised-button color="warn" (click)="draftCharacter(character)">Draft this unit</button>
+        <button *ngIf="phase === 'Deploy'" mat-raised-button color="warn" (click)="deployCharacter(character)">Deploy this unit</button>
+        <button *ngIf="phase === 'Draft'" mat-raised-button color="warn" (click)="draftCharacter(character)">Draft this unit</button>
     </mat-card-actions>
 </mat-card>
   
