@@ -18,5 +18,8 @@ export class CharactercardComponent implements OnInit {
   draftCharacter(character) {
     this.draftService.draftCharacter(character);
   }
+  deployCharacter(character) {
+    console.log("character deploy", character);
+  }
 
 }

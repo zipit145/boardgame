@@ -17,6 +17,7 @@ export class DraftService {
    }
 
   draftCharacter(newCharacter){
+    newCharacter.drafted = true;
     this.draftChange.next(newCharacter);
   }
   getDraft(): Observable<Character[]>{

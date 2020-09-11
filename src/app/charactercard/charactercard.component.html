@@ -10,7 +10,8 @@
         <div><span>Character Description: </span>{{character.description}}</div>
     </mat-card-content>
     <mat-card-actions>
-        <button mat-raised-button color="primary" (click)="draftCharacter(character)">Draft this unit</button>
+        <button *ngIf="character.drafted" mat-raised-button color="warn" (click)="deployCharacter(character)">Deploy this unit</button>
+        <button *ngIf="!character.drafted" mat-raised-button color="warn" (click)="draftCharacter(character)">Draft this unit</button>
     </mat-card-actions>
 </mat-card>
   

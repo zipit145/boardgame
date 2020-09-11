@@ -1,4 +1,8 @@
 .mainContainer{
     display: flex;
     background-color: #919189;
+    /* temporary width solution need to move this to global css at root */
+    min-width: 2000px;
 }
+
+
