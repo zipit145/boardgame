@@ -16,6 +16,8 @@ import { DraftDashboardComponent } from './draft-dashboard/draft-dashboard.compo
 import { CurrentSelectedUnitDashboardComponent } from './current-selected-unit-dashboard/current-selected-unit-dashboard.component';
 import { StoreModule } from '@ngrx/store';
 import { reducer } from './state/reducers/characters.reducers';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -32,7 +34,8 @@ import { reducer } from './state/reducers/characters.reducers';
     AppRoutingModule,
     BrowserAnimationsModule,
     AngularMaterialModule,
-    StoreModule.forRoot(reducer)
+    StoreModule.forRoot(reducer),
+    StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production })
   ],
   providers: [],
   bootstrap: [AppComponent],
