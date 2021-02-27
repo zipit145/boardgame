@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { BoardService } from '../board.service';
-import { Board } from '../board';
+import { Board } from '../models/board';
 
 
 @Component({

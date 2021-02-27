@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Board } from './board';
+import { Board } from './models/board';
 import { BOARD } from './mock-board';
 import { Observable, of } from 'rxjs';
 

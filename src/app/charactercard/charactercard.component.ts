@@ -1,6 +1,9 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Character } from '../character';
+import { Character } from '../models/character';
 import { DraftService } from '../draft.service';
+import { draftCharacter } from '../state/actions/characters.actions';
+import { selectCharacters } from '../state/selectors/characters.selectors';
+import { Store, select } from '@ngrx/store';
 
 
 @Component({
@@ -12,12 +15,17 @@ export class CharactercardComponent implements OnInit {
   @Input() character: Character;
   @Input() phase: string;
 
-  constructor(private draftService: DraftService) { }
+  constructor(
+    private draftService: DraftService,
+    private store: Store
+    ) { }
 
   ngOnInit(): void {
+    this.store.select(selectCharacters).subscribe(data => console.log("test", data))
   }
   draftCharacter(character) {
     this.draftService.draftCharacter(character);
+    this.store.dispatch(draftCharacter(character));
   }
   deployCharacter(character) {
     console.log("character deploy", character);
