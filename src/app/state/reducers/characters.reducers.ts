@@ -1,14 +1,8 @@
 import { Action, createReducer, on } from '@ngrx/store';
 import { draftCharacter, home }  from '../actions/characters.actions';
+import { initialCharacterState, CharacterState } from '../models/state';
 import { Character } from '../../models/character';
 
-export const initialCharacterState: any = {
-  characters: []
-}
-
-export interface CharacterState {
-    characters: Character[]
-}
 
 const charactersReducer = createReducer(
     initialCharacterState,
@@ -19,6 +13,6 @@ const charactersReducer = createReducer(
     ),
   );
   
-  export function reducer(state: Character[] | undefined, action: Action) {
+  export function reducer(state: CharacterState | undefined, action: Action) {
     return charactersReducer(state, action);
   }

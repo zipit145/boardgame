@@ -1,13 +1,7 @@
 import { createSelector } from '@ngrx/store';
 import { Character } from '../../models/character';
-import { CharacterState } from '../reducers/characters.reducers';
- 
-export interface FeatureState {
-  counter: number;
-}
- 
-export interface AppState {
-  feature: FeatureState;
-}
+import { CharacterState } from '../models/state';
+
+//TODO better selectors
  
 export const selectCharacters = (state: any) => state.state.characters;

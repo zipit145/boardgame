@@ -32,7 +32,7 @@ import { environment } from '../environments/environment';
     AppRoutingModule,
     BrowserAnimationsModule,
     AngularMaterialModule,
-    StoreModule.forRoot({ state: reducer}),
+    StoreModule.forRoot({ state: reducer}), //TODO fix the double state.state issue
     StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production })
   ],
   providers: [],

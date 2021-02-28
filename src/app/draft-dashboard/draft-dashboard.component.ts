@@ -2,7 +2,6 @@ import { Component, OnInit, OnChanges } from '@angular/core';
 import { Character } from '../models/character';
 import { DraftService } from '../draft.service';
 import { Observable } from 'rxjs';
-import { CharacterState } from '../state/reducers/characters.reducers';
 
 @Component({
   selector: 'app-draft-dashboard',

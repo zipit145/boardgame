@@ -3,7 +3,6 @@ import { Character } from './models/character';
 import { Observable, of, Subject } from 'rxjs';
 import { selectCharacters } from  './state/selectors/characters.selectors';
 import { Store, select } from '@ngrx/store';
-import { CharacterState } from './state/reducers/characters.reducers';
 
 @Injectable({
   providedIn: 'root'
