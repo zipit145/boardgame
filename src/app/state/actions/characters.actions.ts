@@ -5,3 +5,7 @@ export const draftCharacter = createAction(
   '[characters] draftCharacter',
   props<{ character: Character }>()
 );
+
+export const home = createAction(
+  '[characters] draftCharacter',
+);

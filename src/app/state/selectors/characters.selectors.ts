@@ -10,8 +10,4 @@ export interface AppState {
   feature: FeatureState;
 }
  
-export const selectCharacters = (state: CharacterState) => state.characters;
-
-// export const selectVisibleBooks = createSelector(
-//     selectCharacters,
-// );
+export const selectCharacters = (state: any) => state.state.characters;

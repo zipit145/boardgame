@@ -4,7 +4,8 @@
       <mat-card-subtitle>These characters have been drafted into your army</mat-card-subtitle>
     </mat-card-header>
     <mat-card-content>
-        <div *ngFor="let character of draft">
+        <!-- <div *ngFor="let character of draft"> -->
+        <div *ngFor="let character of draftRX$ | async">
             <app-charactercard [character]="character" [phase]="phase"></app-charactercard>
         </div>
     </mat-card-content>
