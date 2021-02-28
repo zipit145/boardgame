@@ -13,7 +13,7 @@ import { CharactercardComponent } from './charactercard/charactercard.component'
 import { DraftDashboardComponent } from './draft-dashboard/draft-dashboard.component';
 import { CurrentSelectedUnitDashboardComponent } from './current-selected-unit-dashboard/current-selected-unit-dashboard.component';
 import { StoreModule } from '@ngrx/store';
-import { reducer, reducerTest } from './state/reducers/characters.reducers';
+import { reducer } from './state/reducers/characters.reducers';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from '../environments/environment';
 
@@ -33,7 +33,6 @@ import { environment } from '../environments/environment';
     BrowserAnimationsModule,
     AngularMaterialModule,
     StoreModule.forRoot({ state: reducer}),
-    // StoreModule.forRoot({ game: reducerTest}),
     StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production })
   ],
   providers: [],

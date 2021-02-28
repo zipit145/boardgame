@@ -11,28 +11,14 @@ import { CharacterState } from './state/reducers/characters.reducers';
 export class DraftService {
   draft: Character[];
   draftChange: Subject<Character> = new Subject<Character>();
-  // draftRX$: Observable<Character[]>;
-  draftRX$: any
+  draftRX$: Observable<Character[]>;
 
   constructor(
     private store: Store
   ) {
-    this.draft = [];
     this.draftRX$ = this.store.select(selectCharacters)
-    this.draftChange.subscribe((newCharacter) =>{
-      this.draft.push(newCharacter)
-    })
+    // this.draftChange.subscribe((newCharacter) =>{  TODO reconsider using subjects 
+    //   this.draft.push(newCharacter)
+    // })
    }
-  draftCharactersRX()
-  {
-
-  }  
-
-  draftCharacter(newCharacter){
-    this.draftChange.next(newCharacter);
-  }
-  getDraft(): Observable<Character[]>{
-
-    return of(this.draft);
-  }
 }

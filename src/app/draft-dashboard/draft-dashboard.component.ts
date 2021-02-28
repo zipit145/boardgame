@@ -12,17 +12,14 @@ import { CharacterState } from '../state/reducers/characters.reducers';
 export class DraftDashboardComponent implements OnInit {
   draft: Character[];
   phase: string;
-  draftRX$: Observable<Character[]>;;
+  draftRX$: Observable<Character[]>;
 
   constructor(private draftService: DraftService) {
 
    }
 
   ngOnInit(): void {
-    this.draft = this.draftService.draft
-    this.draftService.draftCharactersRX();
     this.draftRX$ = this.draftService.draftRX$
-    this.draftRX$.subscribe(data => console.log(data))
     this.phase = "Deploy"
   }
 

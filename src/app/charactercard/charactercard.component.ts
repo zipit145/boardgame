@@ -15,8 +15,7 @@ import { selectCharacters } from  '../state/selectors/characters.selectors';
 export class CharactercardComponent implements OnInit {
   @Input() character: Character;
   @Input() phase: string;
-  // draftRX$: Observable<Character[]>;
-  draftRX$: any
+  draftRX$: Observable<Character[]>;
 
   constructor(
     private draftService: DraftService,
@@ -27,12 +26,8 @@ export class CharactercardComponent implements OnInit {
 
   }
   draftCharacter(character) {
-    this.draftService.draftCharacter(character);
     this.store.dispatch(draftCharacter({character: character}));
     this.draftRX$ = this.store.select(selectCharacters);
-    this.draftService.draftCharactersRX();
-    // this.draftRX$ = this.draftService.draftRX$
-    // this.draftRX$.subscribe(data => console.log(data.state.characters));
   }
   deployCharacter(character) {
     console.log("character deploy", character);
